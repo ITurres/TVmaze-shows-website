@@ -1,0 +1,23 @@
+/* Global Styles */
+
+:root {
+    /* Set your variables here */
+    --font: 'Montserrat', sans-serif;
+  }
+  
+  html {
+    box-sizing: border-box;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+      font-size: 62.5%;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  
+    /* outline: 1px solid red !important; */
+  }
