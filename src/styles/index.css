@@ -1,10 +1,2 @@
-/* Global Styles */
-
-:root {
-  --font: 'Montserrat', sans-serif;
-}
-
-html {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-}
+@import 'base/normalize.css';
+@import 'base/base.css';
