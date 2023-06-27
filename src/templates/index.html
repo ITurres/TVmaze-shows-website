@@ -24,7 +24,24 @@
     <title>Test</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <header class="container">
+      <nav class="navbar justify-content-start">
+        <a class="navbar-brand" href="index.html">
+          <img
+            id="navbar-logo"
+            class="navbar__logo d-inline-block align-top"
+            alt="tvmaze logo"
+          />
+        </a>
+        <ul class="nav">
+          <li class="list-group-item active">
+            Shows<span id="showsCounter"></span>
+          </li>
+          <li class="list-group-item ms-3">Movies</li>
+          <li class="list-group-item ms-3">Documentaries</li>
+        </ul>
+      </nav>
+    </header>
     <script
       src="https://kit.fontawesome.com/5d25a44371.js"
       crossorigin="anonymous"

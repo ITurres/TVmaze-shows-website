@@ -1,0 +1,14 @@
+:root {
+  --font: 'Montserrat', sans-serif;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+}
