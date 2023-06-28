@@ -6,7 +6,7 @@ const getAllShowsData = async (callback) => {
     const request = new Request(urlAPI);
     const response = await fetch(request);
     const showsData = await response.json();
-    return callback(showsData);
+    return callback(showsData.slice(0, 18));
   } catch (error) {
     return error;
   }
