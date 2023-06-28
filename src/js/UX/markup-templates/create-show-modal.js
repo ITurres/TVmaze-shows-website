@@ -37,6 +37,11 @@ const createShowModal = (show) => `
         </div>
       </div>
       <p class="show__summary p-3">${show.summary.replace(/<p>/, '').replace(/<\/p>/, '')}</p>
+      <div class="align-self-center">
+        <h2 class="text-center">Comments(<strong data-comments-counter></strong>)</h2>
+        <div id="comments-container" 
+          class="comments-container p-2"></div>
+      </div>
     </div>
   </div>`;
 
