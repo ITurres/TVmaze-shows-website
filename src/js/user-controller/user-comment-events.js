@@ -1,7 +1,6 @@
 import getSingleShowData from '../services/tvmaze-API/get-single-show-data.js';
 import createShowModal from '../UX/markup-templates/create-show-modal.js';
-import getComments from '../services/involvement-API/get-comments.js';
-import createComments from '../UX/markup-templates/create-comments.js';
+import injectComments from '../UX/markup-injectors/inject-comments.js';
 import closeModal from '../UX/close-modal.js';
 
 // ? 'comment' button event listener
@@ -13,10 +12,7 @@ const modalEvents = () => {
       const showData = await getSingleShowData(button.id);
       modalHolder.innerHTML = createShowModal(showData);
 
-      const showComments = await getComments(showData.id);
-      const commentsTemplate = createComments(showComments);
-      const commentsContainer = document.getElementById('comments-container');
-      commentsContainer.innerHTML = commentsTemplate;
+      injectComments(showData.id);
       closeModal(modalHolder);
     });
   });
