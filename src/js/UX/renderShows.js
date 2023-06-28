@@ -1,5 +1,4 @@
 // API elements ------------------------------------------------------------------------------------
-import { urlInvolvementAPI, idurlInvolvementAPI } from '../services/involvement-API/endpointInvolvementAPI.js';
 import getAllShowsData from '../services/tvmaze-API/getAllShowsData.js';
 
 // Home page ---------------------------------------------------------------------------------------
