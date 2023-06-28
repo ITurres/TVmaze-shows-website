@@ -2,6 +2,8 @@
 import getAllShowsData from '../services/tvmaze-API/getAllShowsData.js';
 
 // Home page ---------------------------------------------------------------------------------------
+import modalEvents from '../user-controller/user-comment-events.js';
+
 const renderShows = async (listOfShows) => {
   let showCards = '';
   listOfShows.forEach((show) => {
@@ -24,4 +26,4 @@ const renderShows = async (listOfShows) => {
   showsContainer.innerHTML = showCards;
 };
 
-getAllShowsData(renderShows);
+getAllShowsData(renderShows).then(() => modalEvents());

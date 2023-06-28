@@ -1,3 +1,4 @@
 @import 'base/normalize.css';
 @import 'base/base.css';
 @import 'components/navbar/navbar.css';
+@import 'UX/modal.css';
