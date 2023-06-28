@@ -6,18 +6,20 @@ import closeModal from '../UX/close-modal.js';
 
 // ? 'comment' button event listener
 
-const modalHolder = document.querySelector('[data-modal-holder]');
+const modalEvents = () => {
+  document.querySelectorAll('[data-show-modal-btn]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const modalHolder = document.querySelector('[data-modal-holder]');
+      const showData = await getSingleShowData(button.id);
+      modalHolder.innerHTML = createShowModal(showData);
 
-document.querySelectorAll('[data-show-modal-btn]').forEach((button) => {
-  button.addEventListener('click', async () => {
-    const showData = await getSingleShowData(button.id);
-    modalHolder.innerHTML = createShowModal(showData);
-
-    const showComments = await getComments(showData.id);
-    const commentsTemplate = createComments(showComments);
-    const commentsContainer = document.getElementById('comments-container');
-    commentsContainer.innerHTML = commentsTemplate;
-
-    closeModal(modalHolder);
+      const showComments = await getComments(showData.id);
+      const commentsTemplate = createComments(showComments);
+      const commentsContainer = document.getElementById('comments-container');
+      commentsContainer.innerHTML = commentsTemplate;
+      closeModal(modalHolder);
+    });
   });
-});
+};
+
+export default modalEvents;
