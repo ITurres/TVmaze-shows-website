@@ -9,10 +9,6 @@ const getComments = async (showId) => {
       }
     );
 
-    if (!response.ok) {
-      throw new Error('Failed to fetch comments');
-    }
-
     const comments = await response.json();
 
     return comments;

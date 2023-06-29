@@ -3,6 +3,7 @@ import createShowModal from '../UX/markup-templates/create-show-modal.js';
 import injectComments from '../UX/markup-injectors/inject-comments.js';
 import closeModal from '../UX/close-modal.js';
 import postComment from '../services/involvement-API/post-comment.js';
+import commentsCounter from '../utils/comments-counter.js';
 
 // ? 'comment' button event listener
 
@@ -24,7 +25,10 @@ const commentEvent = () => {
         comment: userComment.value
       });
 
-      await injectComments(showId);
+      const commentsContainer = document.getElementById('comments-container');
+      await injectComments(showId, commentsContainer);
+
+      document.querySelector('[data-comments-counter]').textContent = commentsCounter(commentsContainer);
 
       userName.value = '';
       userComment.value = '';
@@ -38,7 +42,10 @@ const modalEvents = () => {
       const showData = await getSingleShowData(button.id);
       modalHolder.innerHTML = createShowModal(showData);
 
-      await injectComments(button.id);
+      const commentsContainer = document.getElementById('comments-container');
+      await injectComments(button.id, commentsContainer);
+
+      document.querySelector('[data-comments-counter]').textContent = commentsCounter(commentsContainer);
 
       commentEvent();
 
