@@ -5,11 +5,13 @@ import getLikesData from '../services/involvement-API/getLikes.js';
 // Home page ---------------------------------------------------------------------------------------
 import likeEvent from '../user-controller/user-likes-events.js';
 import modalEvents from '../user-controller/user-comment-events.js';
+import amountOfShows from './markup-injectors/inject-items-counter.js';
 
 const renderShows = async (listOfShows) => {
   const likesData = await getLikesData();
   let likes = 0;
   let showCards = '';
+  let counter = 0;
   listOfShows.forEach((show, index) => {
     const item = likesData.find((item) => item.item_id === `${index + 1}`);
     likes = item ? item.likes : '';
@@ -26,12 +28,15 @@ const renderShows = async (listOfShows) => {
           </div>
         </div>
     `;
+    counter += 1;
   });
   // Insert the cards into the show list
   const showsContainer = document.querySelector('.shows-container');
   showsContainer.innerHTML = showCards;
   // Add event listeners to the like buttons
   likeEvent();
+  // To update the total number of shows in the navbar
+  amountOfShows(counter);
 };
 
 getAllShowsData(renderShows).then(() => modalEvents());
