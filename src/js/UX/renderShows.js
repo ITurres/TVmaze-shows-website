@@ -35,7 +35,7 @@ const renderShows = async (listOfShows) => {
   showsContainer.innerHTML = showCards;
   // Add event listeners to the like buttons
   likeEvent();
-  // To show the total number of shows in the navbar
+  // To update the total number of shows in the navbar
   amountOfShows(counter);
 };
 
