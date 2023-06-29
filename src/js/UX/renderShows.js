@@ -3,6 +3,7 @@ import getAllShowsData from '../services/tvmaze-API/getAllShowsData.js';
 import getLikesData from '../services/involvement-API/getLikes.js';
 
 // Home page ---------------------------------------------------------------------------------------
+import likeEvent from '../user-controller/user-likes-events.js';
 import modalEvents from '../user-controller/user-comment-events.js';
 
 const renderShows = async (listOfShows) => {
@@ -29,6 +30,8 @@ const renderShows = async (listOfShows) => {
   // Insert the cards into the show list
   const showsContainer = document.querySelector('.shows-container');
   showsContainer.innerHTML = showCards;
+  // Add event listeners to the like buttons
+  likeEvent();
 };
 
 getAllShowsData(renderShows).then(() => modalEvents());
