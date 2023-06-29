@@ -4,8 +4,8 @@ import involvementAPI from './involvement-API.js';
 // eslint-disable-next-line consistent-return
 const getLikesData = async () => {
   const response = await fetch(`${involvementAPI.baseUrl}${involvementAPI.appId}/likes/`, { method: 'GET' });
-  const data = await response.json();
   if (JSON.stringify(response) !== '[]') {
+    const data = await response.json();
     return data;
   }
   if (JSON.stringify(response) === '[]') {
