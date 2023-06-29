@@ -10,7 +10,7 @@ const renderShows = async (listOfShows) => {
   let likes = 0;
   let showCards = '';
   listOfShows.forEach((show, index) => {
-    const item = likesData.find((item) => item.item_id === index);
+    const item = likesData.find((item) => item.item_id === `${index + 1}`);
     likes = item ? item.likes : '';
     showCards += `
         <div class="card m-2 shadow mb-5 rounded position-relative" style="width: 12rem;">
