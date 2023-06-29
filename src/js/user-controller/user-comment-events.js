@@ -24,7 +24,8 @@ const commentEvent = () => {
         comment: userComment.value
       });
 
-      await injectComments(showId);
+      const commentsContainer = document.getElementById('comments-container');
+      await injectComments(showId, commentsContainer);
 
       userName.value = '';
       userComment.value = '';
@@ -38,7 +39,8 @@ const modalEvents = () => {
       const showData = await getSingleShowData(button.id);
       modalHolder.innerHTML = createShowModal(showData);
 
-      await injectComments(button.id);
+      const commentsContainer = document.getElementById('comments-container');
+      await injectComments(button.id, commentsContainer);
 
       commentEvent();
 
