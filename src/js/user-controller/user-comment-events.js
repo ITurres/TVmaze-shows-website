@@ -1,10 +1,35 @@
 import getSingleShowData from '../services/tvmaze-API/get-single-show-data.js';
 import createShowModal from '../UX/markup-templates/create-show-modal.js';
-import getComments from '../services/involvement-API/get-comments.js';
-import createComments from '../UX/markup-templates/create-comments.js';
+import injectComments from '../UX/markup-injectors/inject-comments.js';
 import closeModal from '../UX/close-modal.js';
+import postComment from '../services/involvement-API/post-comment.js';
 
 // ? 'comment' button event listener
+
+const commentEvent = () => {
+  document
+    .querySelector('[data-comment-btn]')
+    .addEventListener('click', async (button) => {
+      const userName = document.querySelector('[name="userName"]');
+      const userComment = document.querySelector('[name="comment"]');
+      const showId = button.target.id;
+
+      if (!userName.value || !userComment.value) {
+        return;
+      }
+
+      await postComment({
+        item_id: showId,
+        username: userName.value,
+        comment: userComment.value
+      });
+
+      await injectComments(showId);
+
+      userName.value = '';
+      userComment.value = '';
+    });
+};
 
 const modalEvents = () => {
   document.querySelectorAll('[data-show-modal-btn]').forEach((button) => {
@@ -13,10 +38,10 @@ const modalEvents = () => {
       const showData = await getSingleShowData(button.id);
       modalHolder.innerHTML = createShowModal(showData);
 
-      const showComments = await getComments(showData.id);
-      const commentsTemplate = createComments(showComments);
-      const commentsContainer = document.getElementById('comments-container');
-      commentsContainer.innerHTML = commentsTemplate;
+      await injectComments(button.id);
+
+      commentEvent();
+
       closeModal(modalHolder);
     });
   });
