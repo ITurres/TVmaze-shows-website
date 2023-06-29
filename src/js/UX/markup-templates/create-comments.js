@@ -11,7 +11,7 @@ const createComments = (comments) => {
       return `
         <div class="comment">
             <p><span class="comment__date">${dateFormatted}</span> 
-              ${comment.username}: ${comment.comment}</p>
+            | ${comment.username}: ${comment.comment}</p>
         </div>
         `;
     })
