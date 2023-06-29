@@ -1,11 +1,10 @@
 import getComments from '../../services/involvement-API/get-comments.js';
 import createComments from '../markup-templates/create-comments.js';
 
-const injectComments = async (showId) => {
+const injectComments = async (showId, commentsContainer) => {
   try {
     const showComments = await getComments(showId);
     const commentsTemplate = createComments(showComments);
-    const commentsContainer = document.getElementById('comments-container');
     commentsContainer.innerHTML = commentsTemplate;
     return commentsContainer;
   } catch (error) {
