@@ -2,7 +2,7 @@ const createShowModal = (show) => `
   <div id="show-info-modal" class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="show__title">${show.name}</h1>
+        <h1 class="show__title m-1">${show.name}</h1>
         <button
           type="button"
           class="close close-modal"
@@ -10,7 +10,7 @@ const createShowModal = (show) => `
           aria-label="Close"
           data-close-modal
         >
-          <i class="fa-solid fa-xmark fa-beat"></i>
+          <i class="fa-solid fa-xmark fa-beat p-2"></i>
         </button>
       </div>
       <div class="modal-body d-flex gap-3">
@@ -42,6 +42,32 @@ const createShowModal = (show) => `
         <div id="comments-container" 
           class="comments-container p-2"></div>
       </div>
+      <div class="m-3 mt-3">
+      <form class="form-inline" data-comment-form>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control comment-input w-50 mb-3"
+            name="userName"
+            placeholder="Your name"
+          />
+          <textarea
+            type="text"
+            class="form-control comment-input mb-3"
+            name="comment"
+            rows="6"
+            placeholder="Your insights"
+          ></textarea>
+          <input
+            type="button"
+            class="btn btn-primary mb-4"
+            id="${show.id}"
+            value="Comment"
+            data-comment-btn
+          />
+        </div>
+      </form>
+    </div>
     </div>
   </div>`;
 
