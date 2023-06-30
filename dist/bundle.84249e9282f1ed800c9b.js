@@ -1570,6 +1570,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.shows-gallery {
 
   .shows-section {
     height: calc(100vh - (105px + 73px));
+    min-height: auto;
 
     /* ?  100vh - (navbar height + footer height) */
   }
@@ -1579,7 +1580,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.shows-gallery {
     flex-wrap: nowrap;
   }
 }
-`, "",{"version":3,"sources":["webpack://./src/styles/layout/shows-section.css"],"names":[],"mappings":"AAAA;EACE,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,uCAAuC;;EAEvC,+CAA+C;AACjD;;AAEA;EACE;IACE,aAAa;IACb,kBAAkB;IAClB,cAAc;EAChB;;EAEA;IACE,aAAa;IACb,cAAc;IACd,mBAAmB;IACnB,kCAAkC;EACpC;;EAEA;IACE,mBAAmB;IACnB,yEAAyE;EAC3E;;EAEA;IACE,oCAAoC;;IAEpC,+CAA+C;EACjD;;EAEA;IACE,WAAW;IACX,iBAAiB;EACnB;AACF","sourcesContent":[".shows-gallery {\n  flex-wrap: wrap;\n}\n\n.shows-section {\n  display: flex;\n  min-height: calc(100vh - (73px + 73px));\n\n  /* ?  100vh - (navbar height + footer height) */\n}\n\n@media (max-width: 576px) {\n  .shows-container {\n    display: flex;\n    overflow-x: scroll;\n    margin: 0 1rem;\n  }\n\n  .shows-container::-webkit-scrollbar {\n    width: 0.6rem;\n    height: 0.7rem;\n    border-radius: 1rem;\n    background-color: var(--off-black);\n  }\n\n  .shows-container::-webkit-scrollbar-thumb {\n    border-radius: 1rem;\n    background: linear-gradient(to top, var(--darker-red), var(--bright-red));\n  }\n\n  .shows-section {\n    height: calc(100vh - (105px + 73px));\n\n    /* ?  100vh - (navbar height + footer height) */\n  }\n\n  .shows-gallery {\n    width: auto;\n    flex-wrap: nowrap;\n  }\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/styles/layout/shows-section.css"],"names":[],"mappings":"AAAA;EACE,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,uCAAuC;;EAEvC,+CAA+C;AACjD;;AAEA;EACE;IACE,aAAa;IACb,kBAAkB;IAClB,cAAc;EAChB;;EAEA;IACE,aAAa;IACb,cAAc;IACd,mBAAmB;IACnB,kCAAkC;EACpC;;EAEA;IACE,mBAAmB;IACnB,yEAAyE;EAC3E;;EAEA;IACE,oCAAoC;IACpC,gBAAgB;;IAEhB,+CAA+C;EACjD;;EAEA;IACE,WAAW;IACX,iBAAiB;EACnB;AACF","sourcesContent":[".shows-gallery {\n  flex-wrap: wrap;\n}\n\n.shows-section {\n  display: flex;\n  min-height: calc(100vh - (73px + 73px));\n\n  /* ?  100vh - (navbar height + footer height) */\n}\n\n@media (max-width: 576px) {\n  .shows-container {\n    display: flex;\n    overflow-x: scroll;\n    margin: 0 1rem;\n  }\n\n  .shows-container::-webkit-scrollbar {\n    width: 0.6rem;\n    height: 0.7rem;\n    border-radius: 1rem;\n    background-color: var(--off-black);\n  }\n\n  .shows-container::-webkit-scrollbar-thumb {\n    border-radius: 1rem;\n    background: linear-gradient(to top, var(--darker-red), var(--bright-red));\n  }\n\n  .shows-section {\n    height: calc(100vh - (105px + 73px));\n    min-height: auto;\n\n    /* ?  100vh - (navbar height + footer height) */\n  }\n\n  .shows-gallery {\n    width: auto;\n    flex-wrap: nowrap;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2198,4 +2199,4 @@ document.querySelector('#navbar-logo').src = _assets_media_tvm_header_logo_red_p
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.ce14b16a61942befcd1e.js.map
+//# sourceMappingURL=bundle.84249e9282f1ed800c9b.js.map
