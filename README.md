@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="./src/assets/media/tvm-header-logo-red.png" alt="tv-maze-logo" heigth="auto" width="170">
+  <img src="./src/assets/media/tvm-header-logo-red.png" alt="tv-maze-logo" heigth="auto" width="210">
   <h1><b>Movies Website</b></h1>
 </div>
 
@@ -114,7 +114,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-<!-- [![Project presentation: video demo](https://cdn.loom.com/sessions/thumbnails/eff934abb4734706b04b3651f8e76e87-with-play.gif)](https://www.loom.com/share/eff934abb4734706b04b3651f8e76e87)-->
+- 🎤 ![Project presentation: video demo](https://drive.google.com/file/d/1-eSDabquIJCbvbQblqBPvSwbDIvaRfIb/view?usp=sharing)
 
 - [Live Demo Link](https://github.com/ITurres/TVmaze-movies-website/dist/)
 
