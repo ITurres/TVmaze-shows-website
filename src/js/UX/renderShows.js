@@ -19,7 +19,7 @@ const renderShows = async (listOfShows) => {
     );
     likes = item ? item.likes : '';
     showCards += `
-        <div class="card m-2 shadow mb-5 rounded" >
+        <div class="card m-2 shadow rounded" >
           <img src="${show.image.medium}" class="card-img-top" alt="${show.name}">
           <div class="card-body align-self-center">
             <button type="button" class="btn btn-sm btn-danger" data-set="${show.id}">
