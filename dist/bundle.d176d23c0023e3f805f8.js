@@ -181,9 +181,9 @@ var renderShows = /*#__PURE__*/function () {
           likes = 0;
           showCards = '';
           counter = 0;
-          listOfShows.forEach(function (show, index) {
+          listOfShows.forEach(function (show) {
             var item = likesData.find(function (item) {
-              return item.item_id === "".concat(index + 1);
+              return parseInt(item.item_id, 10) === show.id;
             });
             likes = item ? item.likes : '';
             showCards += "\n        <div class=\"card m-2 shadow mb-5 rounded\" >\n          <img src=\"".concat(show.image.medium, "\" class=\"card-img-top\" alt=\"").concat(show.name, "\">\n          <div class=\"card-body align-self-center\">\n            <button type=\"button\" class=\"btn btn-sm btn-danger\" data-set=\"").concat(show.id, "\">\n              <i class=\"fa-regular fa-heart\"> ").concat(likes, "</i>\n            </button>\n            <button type=\"button\" class=\"btn btn-sm btn-primary\" id=\"").concat(show.id, "\" \n              data-toggle=\"modal\" data-target=\"#showsModal\" data-show-modal-btn>\n              Comments\n            </button>\n          </div>\n        </div>\n    ");
@@ -326,7 +326,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var involvementAPI = {
   baseUrl: 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/',
-  appId: '5iPcRalYBzzH0JwjuAJ7'
+  appId: '7qb3rNZd5d9LahZb1f2p'
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (involvementAPI);
 
@@ -535,7 +535,7 @@ var getAllShowsData = /*#__PURE__*/function () {
           return response.json();
         case 7:
           showsData = _context.sent;
-          return _context.abrupt("return", callback(showsData.slice(0, 18)));
+          return _context.abrupt("return", callback(showsData.slice(0, 42)));
         case 11:
           _context.prev = 11;
           _context.t0 = _context["catch"](0);
@@ -2185,4 +2185,4 @@ document.querySelector('#navbar-logo').src = _assets_media_tvm_header_logo_red_p
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.cf9c99d0f60fb3d0f408.js.map
+//# sourceMappingURL=bundle.d176d23c0023e3f805f8.js.map
