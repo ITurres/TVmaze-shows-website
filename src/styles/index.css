@@ -3,4 +3,6 @@
 @import 'base/base.css';
 @import 'components/navbar/navbar.css';
 @import 'components/modals/show-modal.css';
+@import 'components/cards/cards.css';
+@import 'components/footer/footer.css';
 @import 'UX/modal.css';

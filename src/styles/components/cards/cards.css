@@ -1,0 +1,19 @@
+.card {
+  width: 14rem;
+  background-color: black;
+  border: none;
+}
+
+.card-body {
+  padding: 0.6rem;
+}
+
+button.btn-danger {
+  background: linear-gradient(to top, var(--darker-red), var(--bright-red));
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 12rem;
+  }
+}
