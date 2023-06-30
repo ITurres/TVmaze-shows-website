@@ -2,6 +2,13 @@
   flex-wrap: wrap;
 }
 
+.shows-section {
+  display: flex;
+  height: calc(100vh - (73px + 73px));
+
+  /* ?  100vh - (navbar height + footer height) */
+}
+
 @media (max-width: 576px) {
   .shows-container {
     display: flex;
@@ -22,7 +29,6 @@
   }
 
   .shows-section {
-    display: flex;
     height: calc(100vh - (105px + 73px));
 
     /* ?  100vh - (navbar height + footer height) */
