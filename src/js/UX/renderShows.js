@@ -16,13 +16,14 @@ const renderShows = async (listOfShows) => {
     const item = likesData.find((item) => item.item_id === `${index + 1}`);
     likes = item ? item.likes : '';
     showCards += `
-        <div class="card m-2 shadow mb-5 rounded position-relative" style="width: 12rem;">
+        <div class="card m-2 shadow mb-5 rounded" >
           <img src="${show.image.medium}" class="card-img-top" alt="${show.name}">
-          <div class="card-body position-absolute bottom-0 end-0">
+          <div class="card-body align-self-center">
             <button type="button" class="btn btn-sm btn-danger" data-set="${show.id}">
               <i class="fa-regular fa-heart"> ${likes}</i>
             </button>
-            <button type="button" class="btn btn-sm btn-primary" id="${show.id}" data-toggle="modal" data-target="#showsModal" data-show-modal-btn>
+            <button type="button" class="btn btn-sm btn-primary" id="${show.id}" 
+              data-toggle="modal" data-target="#showsModal" data-show-modal-btn>
               Comments
             </button>
           </div>
