@@ -30,6 +30,7 @@
 
   .shows-section {
     height: calc(100vh - (105px + 73px));
+    min-height: auto;
 
     /* ?  100vh - (navbar height + footer height) */
   }
