@@ -13,8 +13,10 @@ const renderShows = async (listOfShows) => {
   let showCards = '';
   let counter = 0;
 
-  listOfShows.forEach((show, index) => {
-    const item = likesData.find((item) => item.item_id === `${index + 1}`);
+  listOfShows.forEach((show) => {
+    const item = likesData.find(
+      (item) => parseInt(item.item_id, 10) === show.id
+    );
     likes = item ? item.likes : '';
     showCards += `
         <div class="card m-2 shadow mb-5 rounded" >
