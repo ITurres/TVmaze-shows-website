@@ -2,6 +2,15 @@
   flex-wrap: wrap;
 }
 
+.shows-section {
+  display: flex;
+  min-height: calc(100vh - (73px + 73px));
+
+  /* ?  100vh - (navbar height + footer height) */
+
+  padding: 3.5rem 0;
+}
+
 @media (max-width: 576px) {
   .shows-container {
     display: flex;
@@ -22,14 +31,17 @@
   }
 
   .shows-section {
-    display: flex;
     height: calc(100vh - (105px + 73px));
+    min-height: auto;
 
     /* ?  100vh - (navbar height + footer height) */
+
+    padding: 1rem 0;
   }
 
   .shows-gallery {
     width: auto;
     flex-wrap: nowrap;
+    overflow-y: clip;
   }
 }

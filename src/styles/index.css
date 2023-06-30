@@ -6,4 +6,5 @@
 @import 'components/cards/cards.css';
 @import 'layout/shows-section.css';
 @import 'components/footer/footer.css';
+@import 'animations/zoom-animation.css';
 @import 'UX/modal.css';

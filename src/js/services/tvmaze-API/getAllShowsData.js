@@ -1,10 +1,9 @@
 // get the data from the TV maze API
-import urlAPI from './endpointTvmazeAPI.js';
+import tvMazeAPIBaseURl from './tvmaze-API.js';
 
 const getAllShowsData = async (callback) => {
   try {
-    const request = new Request(urlAPI);
-    const response = await fetch(request);
+    const response = await fetch(tvMazeAPIBaseURl);
     const showsData = await response.json();
     return callback(showsData.slice(0, 42));
   } catch (error) {
