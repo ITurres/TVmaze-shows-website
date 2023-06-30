@@ -4,7 +4,7 @@ const createShowModal = (show) => {
     ''
   );
   return `
-  <div id="show-info-modal" class="modal-dialog modal-dialog-centered" role="document">
+  <div id="show-info-modal" class="modal-dialog modal-dialog-centered zoom-animation" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="show__title m-1">${show.name}</h1>
