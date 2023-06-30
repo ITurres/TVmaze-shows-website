@@ -15,7 +15,7 @@ const createShowModal = (show) => {
           aria-label="Close"
           data-close-modal
         >
-          <i class="fa-solid fa-xmark fa-beat p-2"></i>
+          <i class="fa-solid fa-xmark p-2"></i>
         </button>
       </div>
       <div class="modal-body d-flex gap-3">
@@ -26,17 +26,21 @@ const createShowModal = (show) => {
         />
         <div class="p-2">
           <ul class="nav flex-column">
-            <li class="show__info pb-2">
-              <strong>&#11088;Premiered:</strong><span> ${show.premiered}</span>
+            <li class="show__info pb-1">
+              <strong><span class="show__emoji">&#11088;</span> Premiered:</strong>
+                <span> ${show.premiered}</span>
             </li>
-            <li class="show__info pb-2">
-              <strong>&#127909;Genres:</strong><span> ${show.genres}</span>
+            <li class="show__info pb-1">
+              <strong><span class="show__emoji">&#127909;</span> Genres:</strong>
+                <span> ${show.genres}</span>
             </li>
-            <li class="show__info pb-2">
-              <strong>&#127887;Language:</strong><span> ${show.language}</span>
+            <li class="show__info pb-1">
+              <strong><span class="show__emoji">&#127887;</span> Language:</strong>
+                <span> ${show.language}</span>
             </li>
-            <li class="show__info">
-              <strong>&#128203;Type:</strong><span> ${show.type}</span>
+            <li class="show__info pb-1">
+              <strong><span class="show__emoji">&#128203;</span> Type:</strong>
+                <span> ${show.type}</span>
             </li>
           </ul>
         </div>
