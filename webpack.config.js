@@ -53,7 +53,7 @@ module.exports = {
       template: 'src/templates/index.html'
     }),
     new FaviconsWebpackPlugin({
-      logo: './src/assets/media/tvm-header-logo-red.png',
+      logo: './src/assets/media/tvm-favicon-96x96.png',
       favicons: {
         appleStartup: false,
         icons: {

@@ -1,0 +1,35 @@
+.shows-gallery {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+  .shows-container {
+    display: flex;
+    overflow-x: scroll;
+    margin: 0 1rem;
+  }
+
+  .shows-container::-webkit-scrollbar {
+    width: 0.6rem;
+    height: 0.7rem;
+    border-radius: 1rem;
+    background-color: var(--off-black);
+  }
+
+  .shows-container::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: linear-gradient(to top, var(--darker-red), var(--bright-red));
+  }
+
+  .shows-section {
+    display: flex;
+    height: calc(100vh - (105px + 73px));
+
+    /* ?  100vh - (navbar height + footer height) */
+  }
+
+  .shows-gallery {
+    width: auto;
+    flex-wrap: nowrap;
+  }
+}
