@@ -4,7 +4,7 @@
 
 .shows-section {
   display: flex;
-  height: calc(100vh - (73px + 73px));
+  min-height: calc(100vh - (73px + 73px));
 
   /* ?  100vh - (navbar height + footer height) */
 }
