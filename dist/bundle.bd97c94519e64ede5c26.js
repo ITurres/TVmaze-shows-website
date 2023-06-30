@@ -1277,7 +1277,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.card {
   width: 12rem;
-  background-color: black;
+  background-color: var(--off-black);
   border: none;
 }
 
@@ -1288,7 +1288,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.card {
 button.btn-danger {
   background: linear-gradient(to top, var(--darker-red), var(--bright-red));
 }
-`, "",{"version":3,"sources":["webpack://./src/styles/components/cards/cards.css"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,uBAAuB;EACvB,YAAY;AACd;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,yEAAyE;AAC3E","sourcesContent":[".card {\n  width: 12rem;\n  background-color: black;\n  border: none;\n}\n\n.card-body {\n  padding: 0.6rem;\n}\n\nbutton.btn-danger {\n  background: linear-gradient(to top, var(--darker-red), var(--bright-red));\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/styles/components/cards/cards.css"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,kCAAkC;EAClC,YAAY;AACd;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,yEAAyE;AAC3E","sourcesContent":[".card {\n  width: 12rem;\n  background-color: var(--off-black);\n  border: none;\n}\n\n.card-body {\n  padding: 0.6rem;\n}\n\nbutton.btn-danger {\n  background: linear-gradient(to top, var(--darker-red), var(--bright-red));\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1331,7 +1331,13 @@ footer.footer a:hover {
 footer.footer .dark-gray {
   color: gray;
 }
-`, "",{"version":3,"sources":["webpack://./src/styles/components/footer/footer.css"],"names":[],"mappings":"AAAA;EACE,kCAAkC;EAClC,uBAAuB;AACzB;;AAEA;EACE,wBAAwB;EACxB,qBAAqB;AACvB;;AAEA;EACE,0BAA0B;AAC5B;;AAEA;EACE,WAAW;AACb","sourcesContent":["footer.footer {\n  background-color: var(--off-black);\n  color: var(--off-white);\n}\n\nfooter.footer a {\n  color: var(--bright-red);\n  text-decoration: none;\n}\n\nfooter.footer a:hover {\n  text-decoration: underline;\n}\n\nfooter.footer .dark-gray {\n  color: gray;\n}\n"],"sourceRoot":""}]);
+
+@media (max-width: 576px) {
+  footer.footer {
+    text-align: center;
+  }
+}
+`, "",{"version":3,"sources":["webpack://./src/styles/components/footer/footer.css"],"names":[],"mappings":"AAAA;EACE,kCAAkC;EAClC,uBAAuB;AACzB;;AAEA;EACE,wBAAwB;EACxB,qBAAqB;AACvB;;AAEA;EACE,0BAA0B;AAC5B;;AAEA;EACE,WAAW;AACb;;AAEA;EACE;IACE,kBAAkB;EACpB;AACF","sourcesContent":["footer.footer {\n  background-color: var(--off-black);\n  color: var(--off-white);\n}\n\nfooter.footer a {\n  color: var(--bright-red);\n  text-decoration: none;\n}\n\nfooter.footer a:hover {\n  text-decoration: underline;\n}\n\nfooter.footer .dark-gray {\n  color: gray;\n}\n\n@media (max-width: 576px) {\n  footer.footer {\n    text-align: center;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2186,4 +2192,4 @@ document.querySelector('#navbar-logo').src = _assets_media_tvm_header_logo_red_p
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.167266b3557b3250340d.js.map
+//# sourceMappingURL=bundle.bd97c94519e64ede5c26.js.map
