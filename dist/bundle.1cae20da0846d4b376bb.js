@@ -138,7 +138,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var createShowModal = function createShowModal(show) {
   var showSummary = show.summary.replace(/<p>|<\/p>|<b>|<\/b>|<i>|<\/i>/gi, '');
-  return "\n  <div id=\"show-info-modal\" class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h1 class=\"show__title m-1\">".concat(show.name, "</h1>\n        <button\n          type=\"button\"\n          class=\"close close-modal\"\n          data-dismiss=\"modal\"\n          aria-label=\"Close\"\n          data-close-modal\n        >\n          <i class=\"fa-solid fa-xmark p-2\"></i>\n        </button>\n      </div>\n      <div class=\"modal-body d-flex gap-3\">\n        <img\n          src=\"").concat(show.image.medium, "\"\n          alt=\"show preview\"\n          class=\"rounded\"\n        />\n        <div class=\"p-2\">\n          <ul class=\"nav flex-column\">\n            <li class=\"show__info pb-1\">\n              <strong><span class=\"show__emoji\">&#11088;</span> Premiered:</strong>\n                <span> ").concat(show.premiered, "</span>\n            </li>\n            <li class=\"show__info pb-1\">\n              <strong><span class=\"show__emoji\">&#127909;</span> Genres:</strong>\n                <span> ").concat(show.genres, "</span>\n            </li>\n            <li class=\"show__info pb-1\">\n              <strong><span class=\"show__emoji\">&#127887;</span> Language:</strong>\n                <span> ").concat(show.language, "</span>\n            </li>\n            <li class=\"show__info pb-1\">\n              <strong><span class=\"show__emoji\">&#128203;</span> Type:</strong>\n                <span> ").concat(show.type, "</span>\n            </li>\n          </ul>\n        </div>\n      </div>\n      <p class=\"show__summary p-3\">").concat(showSummary, "</p>\n      <div class=\"align-self-center\">\n        <h2 class=\"text-center\">Comments( <strong data-comments-counter></strong> )</h2>\n        <div id=\"comments-container\" \n          class=\"comments-container p-2\"></div>\n      </div>\n      <div class=\"m-3 mt-3\">\n      <form class=\"form-inline\" data-comment-form>\n        <div class=\"form-group\">\n          <input\n            type=\"text\"\n            class=\"form-control comment-input w-50 mb-3\"\n            name=\"userName\"\n            placeholder=\"Your name\"\n          />\n          <textarea\n            type=\"text\"\n            class=\"form-control comment-input mb-3\"\n            name=\"comment\"\n            rows=\"6\"\n            placeholder=\"Your insights\"\n          ></textarea>\n          <input\n            type=\"button\"\n            class=\"btn btn-primary mb-4\"\n            id=\"").concat(show.id, "\"\n            value=\"Comment\"\n            data-comment-btn\n          />\n        </div>\n      </form>\n    </div>\n    </div>\n  </div>");
+  return "\n  <div id=\"show-info-modal\" class=\"modal-dialog modal-dialog-centered zoom-animation\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h1 class=\"show__title m-1\">".concat(show.name, "</h1>\n        <button\n          type=\"button\"\n          class=\"close close-modal\"\n          data-dismiss=\"modal\"\n          aria-label=\"Close\"\n          data-close-modal\n        >\n          <i class=\"fa-solid fa-xmark p-2\"></i>\n        </button>\n      </div>\n      <div class=\"modal-body d-flex gap-3\">\n        <img\n          src=\"").concat(show.image.medium, "\"\n          alt=\"show preview\"\n          class=\"rounded\"\n        />\n        <div class=\"p-2\">\n          <ul class=\"nav flex-column\">\n            <li class=\"show__info pb-1\">\n              <strong><span class=\"show__emoji\">&#11088;</span> Premiered:</strong>\n                <span> ").concat(show.premiered, "</span>\n            </li>\n            <li class=\"show__info pb-1\">\n              <strong><span class=\"show__emoji\">&#127909;</span> Genres:</strong>\n                <span> ").concat(show.genres, "</span>\n            </li>\n            <li class=\"show__info pb-1\">\n              <strong><span class=\"show__emoji\">&#127887;</span> Language:</strong>\n                <span> ").concat(show.language, "</span>\n            </li>\n            <li class=\"show__info pb-1\">\n              <strong><span class=\"show__emoji\">&#128203;</span> Type:</strong>\n                <span> ").concat(show.type, "</span>\n            </li>\n          </ul>\n        </div>\n      </div>\n      <p class=\"show__summary p-3\">").concat(showSummary, "</p>\n      <div class=\"align-self-center\">\n        <h2 class=\"text-center\">Comments( <strong data-comments-counter></strong> )</h2>\n        <div id=\"comments-container\" \n          class=\"comments-container p-2\"></div>\n      </div>\n      <div class=\"m-3 mt-3\">\n      <form class=\"form-inline\" data-comment-form>\n        <div class=\"form-group\">\n          <input\n            type=\"text\"\n            class=\"form-control comment-input w-50 mb-3\"\n            name=\"userName\"\n            placeholder=\"Your name\"\n          />\n          <textarea\n            type=\"text\"\n            class=\"form-control comment-input mb-3\"\n            name=\"comment\"\n            rows=\"6\"\n            placeholder=\"Your insights\"\n          ></textarea>\n          <input\n            type=\"button\"\n            class=\"btn btn-primary mb-4\"\n            id=\"").concat(show.id, "\"\n            value=\"Comment\"\n            data-comment-btn\n          />\n        </div>\n      </form>\n    </div>\n    </div>\n  </div>");
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createShowModal);
 
@@ -186,7 +186,7 @@ var renderShows = /*#__PURE__*/function () {
               return parseInt(item.item_id, 10) === show.id;
             });
             likes = item ? item.likes : '';
-            showCards += "\n        <div class=\"card m-2 shadow mb-5 rounded\" >\n          <img src=\"".concat(show.image.medium, "\" class=\"card-img-top\" alt=\"").concat(show.name, "\">\n          <div class=\"card-body align-self-center\">\n            <button type=\"button\" class=\"btn btn-sm btn-danger\" data-set=\"").concat(show.id, "\">\n              <i class=\"fa-regular fa-heart\"> ").concat(likes, "</i>\n            </button>\n            <button type=\"button\" class=\"btn btn-sm btn-primary\" id=\"").concat(show.id, "\" \n              data-toggle=\"modal\" data-target=\"#showsModal\" data-show-modal-btn>\n              Comments\n            </button>\n          </div>\n        </div>\n    ");
+            showCards += "\n        <div class=\"card m-2 shadow rounded\" >\n          <img src=\"".concat(show.image.medium, "\" class=\"card-img-top\" alt=\"").concat(show.name, "\">\n          <div class=\"card-body align-self-center\">\n            <button type=\"button\" class=\"btn btn-sm btn-danger\" data-set=\"").concat(show.id, "\">\n              <i class=\"fa-regular fa-heart\"> ").concat(likes, "</i>\n            </button>\n            <button type=\"button\" class=\"btn btn-sm btn-primary\" id=\"").concat(show.id, "\" \n              data-toggle=\"modal\" data-target=\"#showsModal\" data-show-modal-btn>\n              Comments\n            </button>\n          </div>\n        </div>\n    ");
             counter += 1;
           });
           // Insert the cards into the show list
@@ -788,8 +788,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_cards_cards_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./components/cards/cards.css */ "./node_modules/css-loader/dist/cjs.js!./src/styles/components/cards/cards.css");
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_layout_shows_section_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./layout/shows-section.css */ "./node_modules/css-loader/dist/cjs.js!./src/styles/layout/shows-section.css");
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_footer_footer_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./components/footer/footer.css */ "./node_modules/css-loader/dist/cjs.js!./src/styles/components/footer/footer.css");
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_UX_modal_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./UX/modal.css */ "./node_modules/css-loader/dist/cjs.js!./src/styles/UX/modal.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_animations_zoom_animation_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./animations/zoom-animation.css */ "./node_modules/css-loader/dist/cjs.js!./src/styles/animations/zoom-animation.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_UX_modal_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./UX/modal.css */ "./node_modules/css-loader/dist/cjs.js!./src/styles/UX/modal.css");
 // Imports
+
 
 
 
@@ -810,7 +812,8 @@ ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_modals
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_cards_cards_css__WEBPACK_IMPORTED_MODULE_7__["default"]);
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_layout_shows_section_css__WEBPACK_IMPORTED_MODULE_8__["default"]);
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_footer_footer_css__WEBPACK_IMPORTED_MODULE_9__["default"]);
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_UX_modal_css__WEBPACK_IMPORTED_MODULE_10__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_animations_zoom_animation_css__WEBPACK_IMPORTED_MODULE_10__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_UX_modal_css__WEBPACK_IMPORTED_MODULE_11__["default"]);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
 // Exports
@@ -842,6 +845,51 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.comments-container {
   max-width: 350px;
 }
 `, "",{"version":3,"sources":["webpack://./src/styles/UX/modal.css"],"names":[],"mappings":"AAAA;EACE,gBAAgB;AAClB","sourcesContent":[".comments-container {\n  max-width: 350px;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/animations/zoom-animation.css":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/animations/zoom-animation.css ***!
+  \****************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+`, "",{"version":3,"sources":["webpack://./src/styles/animations/zoom-animation.css"],"names":[],"mappings":"AAAA;EACE;IACE,2BAA2B;EAC7B;;EAEA;IACE,2BAA2B;EAC7B;AACF;;AAEA;EACE;IACE,mBAAmB;EACrB;;EAEA;IACE,mBAAmB;EACrB;AACF","sourcesContent":["@-webkit-keyframes animatezoom {\n  from {\n    -webkit-transform: scale(0);\n  }\n\n  to {\n    -webkit-transform: scale(1);\n  }\n}\n\n@keyframes animatezoom {\n  from {\n    transform: scale(0);\n  }\n\n  to {\n    transform: scale(1);\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1369,6 +1417,18 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.modal-content {
 
 .modal-header {
   border-bottom: none;
+  padding: 1rem 1rem 0.1rem 1rem;
+}
+
+.modal::-webkit-scrollbar {
+  width: 0.7rem;
+  border-radius: 1rem;
+  background-color: var(--dark-gray);
+}
+
+.modal::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: linear-gradient(to top, var(--darker-red), var(--bright-red));
 }
 
 button.close-modal {
@@ -1435,11 +1495,10 @@ button.close-modal:hover {
 }
 
 .btn-primary:active {
-  /* background-color: var(--off-black);
+  background-color: var(--off-black);
   border: 2px solid var(--bright-red);
   color: var(--bright-red);
-  font-weight: 900; */
-  background-color: aqua;
+  font-weight: 900;
 }
 
 /* ? Bootstrap Overrides */
@@ -1453,7 +1512,22 @@ button.close-modal:hover {
   border: 2px solid var(--dark-gray);
   color: var(--off-white);
 }
-`, "",{"version":3,"sources":["webpack://./src/styles/components/modals/show-modal.css"],"names":[],"mappings":"AAAA;EACE,kCAAkC;AACpC;;AAEA;EACE,mBAAmB;AACrB;;AAEA;EACE,iBAAiB;EACjB,uBAAuB;EACvB,uBAAuB;EACvB,YAAY;EACZ,kCAAkC;AACpC;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE,uBAAuB;EACvB,kCAAkC;AACpC;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,4BAA4B;EAC5B,uBAAuB;EACvB,sBAAsB;EACtB,wCAAwC;EACxC,qBAAqB;AACvB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,SAAS;AACX;;AAEA;;;EAGE,kCAAkC;EAClC,uBAAuB;EACvB,8BAA8B;AAChC;;AAEA;EACE,+BAA+B;EAC/B,2CAA2C;AAC7C;;AAEA;EACE,kCAAkC;EAClC,mCAAmC;EACnC,wBAAwB;EACxB,gBAAgB;AAClB;;AAEA;EACE,kCAAkC;EAClC,mCAAmC;EACnC,wBAAwB;AAC1B;;AAEA;EACE;;;qBAGmB;EACnB,sBAAsB;AACxB;;AAEA,0BAA0B;;AAE1B;;;;;EAKE,mCAAmC;EACnC,kCAAkC;EAClC,uBAAuB;AACzB","sourcesContent":[".modal-content {\n  background-color: var(--off-black);\n}\n\n.modal-header {\n  border-bottom: none;\n}\n\nbutton.close-modal {\n  font-size: 1.8rem;\n  background: transparent;\n  color: var(--off-white);\n  border: none;\n  transition: color 0.2s ease-in-out;\n}\n\nbutton.close-modal:hover {\n  color: var(--bright-red);\n}\n\n.show__info--holder {\n  border-radius: 0.375rem;\n  border: 3px solid var(--dark-gray);\n}\n\n.show__emoji {\n  font-size: 1.4rem;\n}\n\n.comment {\n  background: var(--dark-gray);\n  border-radius: 0.375rem;\n  padding: 0.1rem 0.4rem;\n  border-left: 2px solid var(--bright-red);\n  margin-bottom: 0.5rem;\n}\n\n.comment__date {\n  font-size: 0.8rem;\n}\n\n.comment p {\n  margin: 0;\n}\n\n.comment-input,\n.comment-input::placeholder,\n.comment-input:focus {\n  background-color: var(--off-black);\n  color: var(--off-white);\n  border-color: var(--dark-gray);\n}\n\n.comment-input:focus {\n  border-color: var(--bright-red);\n  box-shadow: 0 0 0 0.25rem var(--bright-red);\n}\n\n.btn-primary {\n  background-color: var(--off-black);\n  border: 2px solid var(--bright-red);\n  color: var(--bright-red);\n  font-weight: 900;\n}\n\n.btn-primary:hover {\n  background-color: var(--dark-gray);\n  border: 2px solid var(--bright-red);\n  color: var(--bright-red);\n}\n\n.btn-primary:active {\n  /* background-color: var(--off-black);\n  border: 2px solid var(--bright-red);\n  color: var(--bright-red);\n  font-weight: 900; */\n  background-color: aqua;\n}\n\n/* ? Bootstrap Overrides */\n\n.btn-check:checked + .btn,\n.btn.active,\n.btn.show,\n.btn:first-child:active,\n:not(.btn-check) + .btn:active {\n  background-color: var(--bright-red);\n  border: 2px solid var(--dark-gray);\n  color: var(--off-white);\n}\n"],"sourceRoot":""}]);
+
+.zoom-animation {
+  -webkit-animation: animatezoom 0.6s ease-in-out 0s;
+  animation: animatezoom 0.6s ease-in-out 0s;
+}
+
+@media (max-width: 400px) {
+  .modal-body {
+    flex-direction: column;
+  }
+
+  .modal-body img {
+    max-width: 220px;
+  }
+}
+`, "",{"version":3,"sources":["webpack://./src/styles/components/modals/show-modal.css"],"names":[],"mappings":"AAAA;EACE,kCAAkC;AACpC;;AAEA;EACE,mBAAmB;EACnB,8BAA8B;AAChC;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,kCAAkC;AACpC;;AAEA;EACE,mBAAmB;EACnB,yEAAyE;AAC3E;;AAEA;EACE,iBAAiB;EACjB,uBAAuB;EACvB,uBAAuB;EACvB,YAAY;EACZ,kCAAkC;AACpC;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE,uBAAuB;EACvB,kCAAkC;AACpC;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,4BAA4B;EAC5B,uBAAuB;EACvB,sBAAsB;EACtB,wCAAwC;EACxC,qBAAqB;AACvB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,SAAS;AACX;;AAEA;;;EAGE,kCAAkC;EAClC,uBAAuB;EACvB,8BAA8B;AAChC;;AAEA;EACE,+BAA+B;EAC/B,2CAA2C;AAC7C;;AAEA;EACE,kCAAkC;EAClC,mCAAmC;EACnC,wBAAwB;EACxB,gBAAgB;AAClB;;AAEA;EACE,kCAAkC;EAClC,mCAAmC;EACnC,wBAAwB;AAC1B;;AAEA;EACE,kCAAkC;EAClC,mCAAmC;EACnC,wBAAwB;EACxB,gBAAgB;AAClB;;AAEA,0BAA0B;;AAE1B;;;;;EAKE,mCAAmC;EACnC,kCAAkC;EAClC,uBAAuB;AACzB;;AAEA;EACE,kDAAkD;EAClD,0CAA0C;AAC5C;;AAEA;EACE;IACE,sBAAsB;EACxB;;EAEA;IACE,gBAAgB;EAClB;AACF","sourcesContent":[".modal-content {\n  background-color: var(--off-black);\n}\n\n.modal-header {\n  border-bottom: none;\n  padding: 1rem 1rem 0.1rem 1rem;\n}\n\n.modal::-webkit-scrollbar {\n  width: 0.7rem;\n  border-radius: 1rem;\n  background-color: var(--dark-gray);\n}\n\n.modal::-webkit-scrollbar-thumb {\n  border-radius: 1rem;\n  background: linear-gradient(to top, var(--darker-red), var(--bright-red));\n}\n\nbutton.close-modal {\n  font-size: 1.8rem;\n  background: transparent;\n  color: var(--off-white);\n  border: none;\n  transition: color 0.2s ease-in-out;\n}\n\nbutton.close-modal:hover {\n  color: var(--bright-red);\n}\n\n.show__info--holder {\n  border-radius: 0.375rem;\n  border: 3px solid var(--dark-gray);\n}\n\n.show__emoji {\n  font-size: 1.4rem;\n}\n\n.comment {\n  background: var(--dark-gray);\n  border-radius: 0.375rem;\n  padding: 0.1rem 0.4rem;\n  border-left: 2px solid var(--bright-red);\n  margin-bottom: 0.5rem;\n}\n\n.comment__date {\n  font-size: 0.8rem;\n}\n\n.comment p {\n  margin: 0;\n}\n\n.comment-input,\n.comment-input::placeholder,\n.comment-input:focus {\n  background-color: var(--off-black);\n  color: var(--off-white);\n  border-color: var(--dark-gray);\n}\n\n.comment-input:focus {\n  border-color: var(--bright-red);\n  box-shadow: 0 0 0 0.25rem var(--bright-red);\n}\n\n.btn-primary {\n  background-color: var(--off-black);\n  border: 2px solid var(--bright-red);\n  color: var(--bright-red);\n  font-weight: 900;\n}\n\n.btn-primary:hover {\n  background-color: var(--dark-gray);\n  border: 2px solid var(--bright-red);\n  color: var(--bright-red);\n}\n\n.btn-primary:active {\n  background-color: var(--off-black);\n  border: 2px solid var(--bright-red);\n  color: var(--bright-red);\n  font-weight: 900;\n}\n\n/* ? Bootstrap Overrides */\n\n.btn-check:checked + .btn,\n.btn.active,\n.btn.show,\n.btn:first-child:active,\n:not(.btn-check) + .btn:active {\n  background-color: var(--bright-red);\n  border: 2px solid var(--dark-gray);\n  color: var(--off-white);\n}\n\n.zoom-animation {\n  -webkit-animation: animatezoom 0.6s ease-in-out 0s;\n  animation: animatezoom 0.6s ease-in-out 0s;\n}\n\n@media (max-width: 400px) {\n  .modal-body {\n    flex-direction: column;\n  }\n\n  .modal-body img {\n    max-width: 220px;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1547,6 +1621,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.shows-gallery {
   min-height: calc(100vh - (73px + 73px));
 
   /* ?  100vh - (navbar height + footer height) */
+
+  padding: 3.5rem 0;
 }
 
 @media (max-width: 576px) {
@@ -1573,14 +1649,17 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.shows-gallery {
     min-height: auto;
 
     /* ?  100vh - (navbar height + footer height) */
+
+    padding: 1rem 0;
   }
 
   .shows-gallery {
     width: auto;
     flex-wrap: nowrap;
+    overflow-y: clip;
   }
 }
-`, "",{"version":3,"sources":["webpack://./src/styles/layout/shows-section.css"],"names":[],"mappings":"AAAA;EACE,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,uCAAuC;;EAEvC,+CAA+C;AACjD;;AAEA;EACE;IACE,aAAa;IACb,kBAAkB;IAClB,cAAc;EAChB;;EAEA;IACE,aAAa;IACb,cAAc;IACd,mBAAmB;IACnB,kCAAkC;EACpC;;EAEA;IACE,mBAAmB;IACnB,yEAAyE;EAC3E;;EAEA;IACE,oCAAoC;IACpC,gBAAgB;;IAEhB,+CAA+C;EACjD;;EAEA;IACE,WAAW;IACX,iBAAiB;EACnB;AACF","sourcesContent":[".shows-gallery {\n  flex-wrap: wrap;\n}\n\n.shows-section {\n  display: flex;\n  min-height: calc(100vh - (73px + 73px));\n\n  /* ?  100vh - (navbar height + footer height) */\n}\n\n@media (max-width: 576px) {\n  .shows-container {\n    display: flex;\n    overflow-x: scroll;\n    margin: 0 1rem;\n  }\n\n  .shows-container::-webkit-scrollbar {\n    width: 0.6rem;\n    height: 0.7rem;\n    border-radius: 1rem;\n    background-color: var(--off-black);\n  }\n\n  .shows-container::-webkit-scrollbar-thumb {\n    border-radius: 1rem;\n    background: linear-gradient(to top, var(--darker-red), var(--bright-red));\n  }\n\n  .shows-section {\n    height: calc(100vh - (105px + 73px));\n    min-height: auto;\n\n    /* ?  100vh - (navbar height + footer height) */\n  }\n\n  .shows-gallery {\n    width: auto;\n    flex-wrap: nowrap;\n  }\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/styles/layout/shows-section.css"],"names":[],"mappings":"AAAA;EACE,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,uCAAuC;;EAEvC,+CAA+C;;EAE/C,iBAAiB;AACnB;;AAEA;EACE;IACE,aAAa;IACb,kBAAkB;IAClB,cAAc;EAChB;;EAEA;IACE,aAAa;IACb,cAAc;IACd,mBAAmB;IACnB,kCAAkC;EACpC;;EAEA;IACE,mBAAmB;IACnB,yEAAyE;EAC3E;;EAEA;IACE,oCAAoC;IACpC,gBAAgB;;IAEhB,+CAA+C;;IAE/C,eAAe;EACjB;;EAEA;IACE,WAAW;IACX,iBAAiB;IACjB,gBAAgB;EAClB;AACF","sourcesContent":[".shows-gallery {\n  flex-wrap: wrap;\n}\n\n.shows-section {\n  display: flex;\n  min-height: calc(100vh - (73px + 73px));\n\n  /* ?  100vh - (navbar height + footer height) */\n\n  padding: 3.5rem 0;\n}\n\n@media (max-width: 576px) {\n  .shows-container {\n    display: flex;\n    overflow-x: scroll;\n    margin: 0 1rem;\n  }\n\n  .shows-container::-webkit-scrollbar {\n    width: 0.6rem;\n    height: 0.7rem;\n    border-radius: 1rem;\n    background-color: var(--off-black);\n  }\n\n  .shows-container::-webkit-scrollbar-thumb {\n    border-radius: 1rem;\n    background: linear-gradient(to top, var(--darker-red), var(--bright-red));\n  }\n\n  .shows-section {\n    height: calc(100vh - (105px + 73px));\n    min-height: auto;\n\n    /* ?  100vh - (navbar height + footer height) */\n\n    padding: 1rem 0;\n  }\n\n  .shows-gallery {\n    width: auto;\n    flex-wrap: nowrap;\n    overflow-y: clip;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2199,4 +2278,4 @@ document.querySelector('#navbar-logo').src = _assets_media_tvm_header_logo_red_p
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.84249e9282f1ed800c9b.js.map
+//# sourceMappingURL=bundle.1cae20da0846d4b376bb.js.map
