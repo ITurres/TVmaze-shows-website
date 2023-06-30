@@ -116,7 +116,7 @@
 
 - 🎤 [Project presentation: video demo](https://drive.google.com/file/d/1-eSDabquIJCbvbQblqBPvSwbDIvaRfIb/view?usp=sharing)
 
-- [Live Demo Link](https://github.com/ITurres/TVmaze-movies-website/dist/)
+- [Live Demo Link](https://iturres.github.io/TVmaze-movies-website/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
