@@ -1,4 +1,9 @@
-const createShowModal = (show) => `
+const createShowModal = (show) => {
+  const showSummary = show.summary.replace(
+    /<p>|<\/p>|<b>|<\/b>|<i>|<\/i>/gi,
+    ''
+  );
+  return `
   <div id="show-info-modal" class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -36,7 +41,7 @@ const createShowModal = (show) => `
           </ul>
         </div>
       </div>
-      <p class="show__summary p-3">${show.summary.replace(/<p>/, '').replace(/<\/p>/, '')}</p>
+      <p class="show__summary p-3">${showSummary}</p>
       <div class="align-self-center">
         <h2 class="text-center">Comments( <strong data-comments-counter></strong> )</h2>
         <div id="comments-container" 
@@ -70,5 +75,6 @@ const createShowModal = (show) => `
     </div>
     </div>
   </div>`;
+};
 
 export default createShowModal;
