@@ -23,12 +23,20 @@ button.close-modal:hover {
   border: 3px solid var(--dark-gray);
 }
 
+.show__emoji {
+  font-size: 1.4rem;
+}
+
 .comment {
   background: var(--dark-gray);
   border-radius: 0.375rem;
   padding: 0.1rem 0.4rem;
   border-left: 2px solid var(--bright-red);
   margin-bottom: 0.5rem;
+}
+
+.comment__date {
+  font-size: 0.8rem;
 }
 
 .comment p {
