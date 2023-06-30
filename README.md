@@ -114,7 +114,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- 🎤 ![Project presentation: video demo](https://drive.google.com/file/d/1-eSDabquIJCbvbQblqBPvSwbDIvaRfIb/view?usp=sharing)
+- 🎤 [Project presentation: video demo](https://drive.google.com/file/d/1-eSDabquIJCbvbQblqBPvSwbDIvaRfIb/view?usp=sharing)
 
 - [Live Demo Link](https://github.com/ITurres/TVmaze-movies-website/dist/)
 
