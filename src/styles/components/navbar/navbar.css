@@ -1,3 +1,18 @@
 .navbar__logo {
   max-width: 150px;
 }
+
+header {
+  background-color: var(--off-black);
+}
+
+nav.navbar {
+  justify-content: flex-start;
+}
+
+@media (max-width: 576px) {
+  nav.navbar {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
