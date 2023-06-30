@@ -12,6 +12,7 @@ const renderShows = async (listOfShows) => {
   let likes = 0;
   let showCards = '';
   let counter = 0;
+
   listOfShows.forEach((show, index) => {
     const item = likesData.find((item) => item.item_id === `${index + 1}`);
     likes = item ? item.likes : '';
@@ -32,7 +33,7 @@ const renderShows = async (listOfShows) => {
     counter += 1;
   });
   // Insert the cards into the show list
-  const showsContainer = document.querySelector('.shows-container');
+  const showsContainer = document.getElementById('shows-holder');
   showsContainer.innerHTML = showCards;
   // Add event listeners to the like buttons
   likeEvent();
