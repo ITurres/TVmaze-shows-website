@@ -1,0 +1,23 @@
+footer.footer {
+  background-color: var(--off-black);
+  color: var(--off-white);
+}
+
+footer.footer a {
+  color: var(--bright-red);
+  text-decoration: none;
+}
+
+footer.footer a:hover {
+  text-decoration: underline;
+}
+
+footer.footer .dark-gray {
+  color: gray;
+}
+
+@media (max-width: 576px) {
+  footer.footer {
+    text-align: center;
+  }
+}

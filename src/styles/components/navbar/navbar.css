@@ -1,0 +1,33 @@
+.navbar__logo {
+  max-width: 150px;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: var(--white);
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar__link:hover {
+  color: var(--bright-red);
+}
+
+header {
+  background-color: var(--off-black);
+}
+
+nav.navbar {
+  justify-content: flex-start;
+}
+
+@media (max-width: 576px) {
+  nav.navbar {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .navbar-brand {
+    margin: 0;
+  }
+}

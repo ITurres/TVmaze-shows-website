@@ -1,0 +1,13 @@
+.card {
+  width: 12rem;
+  background-color: var(--off-black);
+  border: none;
+}
+
+.card-body {
+  padding: 0.6rem;
+}
+
+button.btn-danger {
+  background: linear-gradient(to top, var(--darker-red), var(--bright-red));
+}
