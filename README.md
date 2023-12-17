@@ -199,9 +199,7 @@ Install this project with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-Upcoming improvements:
-
-- [x] All fulfilled.
+- [ ] Migrate to React TypeScript.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
